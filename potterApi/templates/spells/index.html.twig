@@ -4,7 +4,9 @@
 
 {% block body %}
     {% for cont in content  %}
-        <h1>{{ cont.spell }}</h1>
+        <h1>{{ cont.name }}</h1>
+        <h2>{{ cont.effect }}</h2>
+<P>------------------------</P>
     {% endfor %}
 {% endblock %}
 
