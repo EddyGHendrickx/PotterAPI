@@ -22,12 +22,12 @@ class API
         return $this->id;
     }
 
-    public function makeCall()
+    public function makeCall($query)
     {
         $client = HttpClient::create();
-        $response = $client->request('GET', 'https://www.potterapi.com/v1/characters/?key='. $this->key);
+        $response = $client->request('GET', 'https://www.potterapi.com/v1/'.$query.'/?key='. $this->key);
+        return json_decode($response->getContent(), true, JSON_PRETTY_PRINT);
 
-        return $response->getContent();
     }
 }
 //$2a$10$.LWsor7mQdv7tNeuf0B8.OusCcMLb7g6YVFHfBW8mqTlHmqQJl.gi

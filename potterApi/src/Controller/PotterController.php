@@ -15,10 +15,9 @@ class PotterController extends AbstractController
     public function index()
     {
         $api = new API();
-        $content = $api->makeCall();
-        $json = json_decode($content, true, JSON_PRETTY_PRINT);
+        $content = $api->makeCall("characters");
         return $this->render('potter/index.html.twig', [
-            'content' => $json,
+            'content' => $content,
         ]);
     }
 }
