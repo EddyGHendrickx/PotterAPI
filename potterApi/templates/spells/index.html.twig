@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PotterController!{% endblock %}
+
+{% block body %}
+    {% for cont in content  %}
+        <h1>{{ cont.spell }}</h1>
+    {% endfor %}
+{% endblock %}
+
