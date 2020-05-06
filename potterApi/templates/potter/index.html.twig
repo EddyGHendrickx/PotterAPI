@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PotterController!{% endblock %}
+
+{% block body %}
+    {% for cont in content  %}
+        <h1>{{ cont.name }}</h1>
+    {% endfor %}
+{% endblock %}
